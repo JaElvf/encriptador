@@ -11,18 +11,18 @@ main{
     margin-left: 160px;
     width: auto;
 }
-#entradaTexto{
+#campoEntrada{
     width: 60%;
     height: 540px;
     display: inline;
     background: #F3F5FC;
     margin-top: 90px;
 }
-#entradaTexto textarea{
+#texto{
     background: transparent;
     margin-top: 0;
-    width: auto;
-    
+    width: 95%;
+    height: 100%;   
     border: none;
     color: #0A3871;
     font-family: "Inter"; 
@@ -30,18 +30,18 @@ main{
     resize: none;
     outline: none;
 }
-#entradaTexto textarea::placeholder{
+#texto::placeholder{
     font-family: "Inter" , sans-serif;
     color: #0A3871;
     font-size: 32px;
     font-weight: 400;
 }
 
-#entradaTexto p{
+#campoEntrada p{
     font-size: 12px;
     color: #495057;
 }
-#entradaTexto p::before{
+#campoEntrada p::before{
     content: url(images/alertIcon.png);
     vertical-align: middle;
 }
@@ -85,6 +85,9 @@ button:active{
 }
 #textoVacio{
     margin: 40% 0 0 0;
+    font-size: 24px;
+    width: 336px;
+    height: 415px;
 }
 #textoVacio p{
     margin-top: 15px;
@@ -103,7 +106,9 @@ button:active{
 #copiar{
     margin-top: 20%;
     background: white;
-    color:#0A3871
+    color:#0A3871;
+    display: none;
+    visibility: hidden;
 }
 
 footer{
