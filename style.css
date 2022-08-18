@@ -14,11 +14,23 @@ main{
     width: auto;
     align-items: stretch;
 }
+#modo{
+    margin: 0;
+    position: absolute;
+    float:right;
+    right: 10%;
+    top: 5%;
+    background: white;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    border: none;
+}
 #campoEntrada{
     width: 50%;
     height: min-content;
     display: inline;
-    background: #F3F5FC;
+    background: transparent;
     margin: 5% 5% 0 0;
 }
 #texto{

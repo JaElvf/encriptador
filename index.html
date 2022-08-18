@@ -11,6 +11,7 @@
         <title>Encriptador de texto</title>
     </head>
     <body>
+        <button id="modo">&#9788;</button>
         <header>
             <img src="images/logoAlura.png" alt="Logo Alura">
         </header>
@@ -170,13 +171,54 @@
                 navigator.clipboard.writeText(texto);
             }
             
+            function cambiarModo() {
+                modo = !modo;
+                if(modo){
+                    claro();
+                }else{
+                    oscuro();
+                }
+            }
+            function claro(){
+                btnModo.innerHTML = "&#9788;";
+                btnModo.style.background = "white";
+                btnModo.style.color = "#0A3871";
+                
+                document.querySelector("body").style.background = "#F3F5FC";
+                document.getElementById("salidaTexto").style.background = "white";
+                document.getElementById("salidaTexto").style.color = "black";
+                document.getElementById("textoVacio").style.color = "black";
+                var parrafo = document.getElementById("textoVacio").childNodes;
+                if (parrafo.length>3) {
+                    parrafo[3].style.color = "#343A40";
+                    parrafo[5].style.color = "#495057";
+                }
+            }
+            function oscuro() {
+                btnModo.innerHTML = "&#9790;";
+                btnModo.style.background = "#0A3871";
+                btnModo.style.color = "#D8DFE8";
+
+                document.querySelector("body").style.background = "#282b30";
+                document.getElementById("salidaTexto").style.background = "#424549";
+                document.getElementById("salidaTexto").style.color = "#D8DFE8";
+                document.getElementById("textoVacio").style.color = "#D8DFE8";
+                var parrafo = document.getElementById("textoVacio").childNodes;
+                if (parrafo.length>3) {
+                    parrafo[3].style.color = "white";
+                    parrafo[5].style.color = "rgba(255,255,255,0.5)";
+                }
+            }
             var btnEncriptar = document.getElementById("encriptar");
             var btnDesencriptar = document.getElementById("desencriptar");
             var btnCopiar = document.getElementById("copiar");
+            var btnModo = document.getElementById("modo");
+            var modo = true;
 
             btnEncriptar.onclick = encriptacion;
             btnDesencriptar.onclick = desencriptacion;
             btnCopiar.onclick = copiar;
+            btnModo.onclick = cambiarModo;
 
         </script>
     </body>
