@@ -16,7 +16,7 @@
         </header>
         <main>
             <fieldset id="campoEntrada">
-                <textarea id="texto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                <textarea id="texto" cols="10" rows="10" placeholder="Ingrese el texto aqui" autofocus></textarea>
                 <p> Solo letras minúsculas y sin acentos</p>
                 <button id="encriptar">Encriptar</button>
                 <button id="desencriptar">Desencriptar</button>    
@@ -169,10 +169,11 @@
                 var texto = document.getElementById("textoVacio").innerHTML;
                 navigator.clipboard.writeText(texto);
             }
+            
             var btnEncriptar = document.getElementById("encriptar");
             var btnDesencriptar = document.getElementById("desencriptar");
             var btnCopiar = document.getElementById("copiar");
-            
+
             btnEncriptar.onclick = encriptacion;
             btnDesencriptar.onclick = desencriptacion;
             btnCopiar.onclick = copiar;
